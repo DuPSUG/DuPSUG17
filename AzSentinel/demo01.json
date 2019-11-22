@@ -1,0 +1,40 @@
+{
+  "requests": [
+    {
+      "content": {
+
+        // Begin of Body
+        "id": "/subscriptions/6c6f34fb-ca67-408c-9fc5-98ee15fca9e8/resourceGroups/infra-management-p-rg/providers/Microsoft.OperationalInsights/workspaces/pkm02/providers/Microsoft.SecurityInsights/alertRules/fdff1b37-6fa1-4aa0-9f12-abb9201d94bc",
+        "name": "fdff1b37-6fa1-4aa0-9f12-abb9201d94bc",
+        "type": "Microsoft.SecurityInsights/alertRules",
+        "kind": "Scheduled",
+        "properties": {
+          "displayName": "demorule01",
+          "description": "",
+          "severity": "Medium",
+          "enabled": true,
+          "query": "SecurityEvent | where EventID == \"4688\" | where CommandLine contains \"-noni -ep bypass $\"",
+          "queryFrequency": "PT5H",
+          "queryPeriod": "PT5H",
+          "triggerOperator": "GreaterThan",
+          "triggerThreshold": 3,
+          "suppressionDuration": "PT5H",
+          "suppressionEnabled": false,
+          "tactics": [
+            "Persistence",
+            "DefenseEvasion",
+            "Collection",
+            "PrivilegeEscalation"
+          ],
+          "incidentConfiguration": null
+        }
+        //End of body
+      },
+      "httpMethod": "PUT",
+      "requestHeaderDetails": {
+        "commandName": "Microsoft_Azure_Security_Insights."
+      },
+      "url": "https://management.azure.com/subscriptions/6c6f34fb-ca67-408c-9fc5-98ee15fca9e8/resourceGroups/infra-management-p-rg/providers/Microsoft.OperationalInsights/workspaces/pkm02/providers/Microsoft.SecurityInsights/alertRules/fdff1b37-6fa1-4aa0-9f12-abb9201d94bc?api-version=2019-01-01-preview"
+    }
+  ]
+}
